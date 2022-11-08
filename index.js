@@ -1,15 +1,17 @@
-function mostrar(param){
-    return 'a'
-}
+const fs = require('fs')
+const log = p=> console.log(p)
 
-const mostrar2 = param => {
-    return 'a'
-}
+let data = ""
 
-const mostrar3 = param => 'a'
 
-const sumar = (a, b) => a + b
+fs.promises.readFile('./info.txt', 'utf-8').then(contenido=>{
+    data = JSON.parse(contenido)
+    log(data)
+    data.contenidoObj.author= 'Nahue'
 
-function sumar(a, b){
-    return a+b
-}
+    fs.promises.writeFile('./package.json.Nahue', JSON.stringify(data, null, 2))
+    .then(d=> log('termine'))
+    .catch(err=>log(err))
+
+}).catch(err=>log(err))
+

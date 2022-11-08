@@ -1,0 +1,19 @@
+[
+    {
+        id: 1,
+        libro: It,
+        autor:Stephen King
+    },
+
+    {
+        id: 2,
+        libro: El Señor de los Anillos,
+        autor:J.R.R Tolkien
+    },
+
+    {
+        id: 1,
+        libro: El retrato de Dorian Gray,
+        autor:Oscar Wilde
+    }
+]
